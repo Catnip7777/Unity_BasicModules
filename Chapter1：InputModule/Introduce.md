@@ -1,5 +1,6 @@
 ## 这里是第一个视频的内容
 注意这个文件夹内的两个模块是1.0版本，后续将随章节更新。
+更新的时候我会标出1.0，2.0等编号。
 章节顺序是我学习和编写的顺序，从最简单的方式开始逐步添加功能😋。
 
 ## 以下是文案
@@ -44,3 +45,45 @@
 具体的代码我会放在github，大家可以随意修改
 
 你学会了吗？
+
+## This is the content of the first video
+Note: The two modules in this folder are version 1.0 and will be updated with subsequent chapters.
+When updating, I will mark the version number like 1.0, 2.0, etc.
+The chapter order follows my learning and development sequence, starting from the simplest methods and gradually adding features 😋.
+
+## Script Below
+Hello everyone, this is Catnip! As a beginner in game development, have you ever encountered these problems?
+
+*   Feeling overwhelmed by a massive list of APIs and not knowing where to start.
+*   Having game design ideas but not knowing which functions to use to build them.
+*   Getting bogged down in code details while making a demo, losing your train of thought.
+
+Don't worry, I've been through all of this too! Today, I'm sharing a super useful insight: **build your game framework using a modular approach**. It's like building a bridge between your "game ideas" and "complex APIs," constructing your game with reusable "functional building blocks."
+
+We just need to write some basic functionalities, like **Input Management, Data Management, Game State, and Presentation**. Then, we can use the same codebase to create different games. Unique features only need to be written separately.
+
+For the first part of this series, let's tackle the most fundamental and crucial module—**the Input Management Module**.
+
+Our goal is to design a system that meets the following requirements:
+
+*   **Flexible Binding:** Easily configure key bindings.
+*   **Real-time Rebinding:** Allow players to customize controls.
+*   **Combo & Combination Support:** Handle complex input detection like combos and key combinations.
+*   **Event-Driven:** Decouple input from other modules.
+
+We know Unity offers three input methods: the `Input` class and two Input Management systems. We will use the `Input` class to build our own input management system.
+
+How to use it is very simple:
+
+1.  First, create an empty GameObject called `EventSystem` and attach a script to it. This gets the event system running.
+2.  Then, create another empty GameObject and attach the input system script to it. Modify the key bindings, combo, and key combination presets in the input system.
+3.  Finally, have any object subscribe to events in the event system. This way, when an input is triggered, it will receive a notification and run the functions we've written.
+
+The core principle is also quite simple:
+
+*   The **Event System** is essentially a dictionary of delegates.
+*   The **Input System** uses the `Input` class to poll our bound keys and implements combos/key combinations by storing input history in a cached array.
+
+The specific code will be available on GitHub, and you are free to modify it.
+
+Did you find this helpful?

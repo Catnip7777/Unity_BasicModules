@@ -243,7 +243,7 @@ public class InputModule : MonoBehaviour
     }
     public void ChangedKeyByA_X()
     {
-        Debug.Log("��ʼ�ļ�");
+        Debug.Log("¿ªÊ¼¸Ä¼ü");
         KeyCode keyCodetmp;
         keyCodetmp = keybind[GameModule.gameState, changekeyto];
         keybind[GameModule.gameState, changekeyto] = keybind[GameModule.gameState, keyindexnow];

@@ -40,3 +40,4 @@ public class LogColorText : MonoBehaviour
         Debug.Log($"<color={color}>{message}</color>");
     }
 }
+
